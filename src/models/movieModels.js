@@ -7,10 +7,14 @@ function create(newMovie) {
     const error = []
     const {
         id,
-        body
+        title,
+        director,
+        year,
+        rating,
+        poster
     } = newMovie
 
-    if (!body) {
+    if (!title || !director || !year || !rating || !poster) {
         error.push('Please Provide Content To Create')
     }
 
@@ -24,25 +28,32 @@ function create(newMovie) {
 
 function modify(movieId, newMovie) {
     const error = []
-    const movieidx = movies.findIndex(ele => ele.id =movie)
+    const movieidx = movies.findIndex(ele => ele.id === movieId)
     if (movieidx === -1) {
         error.push('Not Found')
     }
 
     const {
         id,
-        body
+        title,
+        director,
+        year,
+        rating,
+        poster
     } = newMovie
+    console.log(newMovie)
+    movies[movieidx].title = title
+    movies[movieidx].director = director
+    movies[movieidx].year = year
+    movies[movieidx].rating = rating
+    movies[movieidx].poster = poster
 
-    movies[movieidx].body = body
-
-    if (!body) {
+    if (!title || !director || !year || !rating || !post) {
         error.push("Please add content")
     }
     if (error.length) return {
         error
     }
-
     return  movies[movieidx] 
 }
 
@@ -50,21 +61,20 @@ function getAll() {
     return movies
 }
 
-function getOne() {
+function getOne(movieId) {
 
-    const movie = movies.find(ele => ele.id =movie)
+    const movie = movies.find(ele => ele.id === movieId)
 
     if (!movie) {
         return {
             error: ['movie not found']
         }
     }
-
     return movie
 }
 
-function remove() {
-    const movieidx = movies.findIndex(ele => ele.id =movie)
+function remove(movieId) {
+    const movieidx = movies.findIndex(ele => ele.id = movieId)
 
     if (movieidx === -1) return {
         error: ['Not Found']

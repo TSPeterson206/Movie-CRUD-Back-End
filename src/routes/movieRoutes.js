@@ -1,12 +1,12 @@
 const express = require('express')
-const blogController = require('../controllers/movieControllers')
+const movieController = require('../controllers/movieControllers')
 const router = express.Router()
 
 
-router.get('/', blogController.readAllMovies)
-router.get('/:movieId', blogController.readOneMovie)
-router.post('/', blogController.createMovie)
-router.put('/:movieId', blogController.modifyMovie)
-router.delete('/:movieId', blogController.removeMovie)
+router.get('/', movieController.readAllMovies)
+router.get('/:movieId', movieController.readOneMovie)
+router.post('/', movieController.createMovie)
+router.put('/:movieId', movieController.modifyMovie)
+router.delete('/:movieId', movieController.removeMovie)
 
 module.exports = router
