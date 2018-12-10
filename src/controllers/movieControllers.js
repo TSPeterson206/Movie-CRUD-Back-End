@@ -13,7 +13,7 @@ function createMovie(req, res, next){
   
     if(newMovie.error) return next( { status: 400, message: newMovie })
     
-    res.status(201).send({ data: newmovie })
+    res.status(201).send({ data: newMovie })
   }
   
   function readAllMovies(req, res, next){

@@ -1,23 +1,26 @@
 module.exports = [
-    // {
-//         id: "A9FH18DH19NCN91",
-//         title: "Reservoir Dogs",
-//         Release: 1992,
-//         Director: "Quentin Tarantino",
-//         poster: "https://www.imdb.com/title/tt0105236/mediaviewer/rm1533490688"
-//     },
-//     {
-//         id: "JFJ100FJ0495H20F",
-//         title: "Full Metal Jacket",
-//         Release: 1987,
-//         Director: "Stanley Kubrick",
-//         poster: "https://www.imdb.com/title/tt0093058/mediaviewer/rm606436352"
-//     },
-//     {
-//         id: "MSDFKNENIENIWFONEW",
-//         title: "Swingers",
-//         Release: 1996,
-//         Director: "Doug Liman",
-//         poster: "https://www.imdb.com/title/tt0117802/mediaviewer/rm3972792320"
-//     }
+    {
+        id: "A9FH18DH19NCN91",
+        title: "Reservoir Dogs",
+        year: 1992,
+        director: "Quentin Tarantino",
+        rating: 3,
+        poster: `<img src="https://cdn.psychologytoday.com/sites/default/files/styles/image-article_inline_full/public/field_blog_entry_images/Reservoir-Dogs-Fresh-New-Hd-Wallpaper.jpg?itok=iAQjj4nB">`
+    },
+    {
+        id: "JFJ100FJ0495H20F",
+        title: "Full Metal Jacket",
+        year: 1987,
+        director: "Stanley Kubrick",
+        rating:4,
+        poster: `<img src="https://images-na.ssl-images-amazon.com/images/I/41MN0ANVJTL._SY445_.jpg">`
+    },
+    {
+        id: "MSDFKNENIENIWFONEW",
+        title: "Swingers",
+        year: 1996,
+        director: "Doug Liman",
+        rating:5,
+        poster: `<img src="https://m.media-amazon.com/images/M/MV5BZjg1ZmViMmEtYzIxNi00MzJlLTk4MDktNTE2ZDkwMzEyMjBhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg">`
+    }
 ]

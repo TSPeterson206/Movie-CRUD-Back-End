@@ -22,6 +22,7 @@ function create(newMovie) {
         error
     }
     newMovie.id=uuid()
+    newMovie.poster=`<img src="${poster}">`
     movies.push(newMovie)
     return movies
 }
@@ -41,14 +42,14 @@ function modify(movieId, newMovie) {
         rating,
         poster
     } = newMovie
-    console.log(newMovie)
+
     movies[movieidx].title = title
     movies[movieidx].director = director
     movies[movieidx].year = year
     movies[movieidx].rating = rating
-    movies[movieidx].poster = poster
+    movies[movieidx].poster = `<img src="${poster}">`
 
-    if (!title || !director || !year || !rating || !post) {
+    if (!title || !director || !year || !rating || !poster) {
         error.push("Please add content")
     }
     if (error.length) return {
